@@ -1,0 +1,68 @@
+div.spotify-widget{
+	overflow: auto;
+	width: 400px;
+	border: 1px solid #bdbfc1;
+	border-radius: 3px;
+	padding: 20px;
+	padding-bottom: 10px;
+}
+
+div.sw_user_pic_wrapper{
+	float: left;
+	width: 20%;
+}
+
+div.sw_user_pic_wrapper img{
+	height: 50px;
+	width: 50px;
+}
+
+div.sw_user_info{
+	float: right;
+	width: 80%;
+	margin-bottom: 15px;
+}
+
+h4.sw_display_name{
+	margin-bottom: 0px;
+}
+
+h5.sw_username{
+	padding-top: 0px;
+}
+
+.spotify-widget hr{
+	margin: 0px;
+}
+
+h6.sw_track_label{
+	margin-bottom: 0px;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+div.sw_track_cover img{
+	height: 75px;
+	width: 75px;
+	margin-top: 5px;
+}
+
+div.sw_track_cover{
+	width: 25%;
+	float: left;
+	margin-top: 10px;
+}
+
+div.sw_track_info{
+	width: 75%;
+	float: right;
+	margin-top: 10px;
+}
+
+div.sw_track_info h4{
+	padding-top: 15px;
+}
+
+div.sw_track_info h5{
+	padding-top: 0px;
+}
