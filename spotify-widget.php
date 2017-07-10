@@ -4,7 +4,7 @@ Plugin Name: Spotify-Widget
 Plugin URI: 
 Description: Easily embed a peronalised Spotify widget on your Wordpress site. 
 Author: James Kingsbury
-Version: 0.9
+Version: 1.0
 Author URI: 
 */
 
@@ -68,7 +68,6 @@ Author URI:
 			
 		//check if auth code or refresh code is stored  
 		$auth_row = sw_get_latest_tokens();
-		//need to change this url to be dependant on installation
 		$redirect_uri = admin_url('options-general.php?page=sw');
 		$url = "https://accounts.spotify.com/authorize/?client_id=5eb75a94bd9d4762b7fb97cc2f262472&response_type=code&redirect_uri=$redirect_uri&scope=user-read-recently-played";
 
