@@ -80,7 +80,8 @@ Author URI:
 
 		}elseif(isset($_GET['code'])){
 			$body = array('grant_type' => 'authorization_code', 'code' => $_GET['code'], 'redirect_uri' => $redirect_uri);
-			$headers = array('Authorization' => 'Basic ' . base64_encode('5eb75a94bd9d4762b7fb97cc2f262472:8e7f14fc94df4f89a460d34ee12b6fbd'));
+			$auth_string = '';
+			$headers = array('Authorization' => 'Basic ' . base64_encode($auth_string));
 			$args = array('headers' => $headers, 'body' => $body);
 			$json_body = json_decode(wp_remote_post('https://accounts.spotify.com/api/token', $args)['body'], true);
 			sw_insert_auth_row($json_body['access_token'], $json_body['refresh_token']); 
@@ -98,7 +99,8 @@ Author URI:
 	//get useable auth token with a refresh token and store in db
 	function sw_get_useable_auth($refresh_token){
 		$body = array('grant_type' => 'refresh_token', 'refresh_token' => $refresh_token);
-		$headers = array('Authorization' => 'Basic ' . base64_encode('5eb75a94bd9d4762b7fb97cc2f262472:8e7f14fc94df4f89a460d34ee12b6fbd'));
+		$auth_string = '';
+		$headers = array('Authorization' => 'Basic ' . base64_encode($auth_string));
 		$args = array('headers' => $headers, 'body' => $body);
 		$response = wp_remote_post('https://accounts.spotify.com/api/token', $args);
 		return json_decode($response['body'], true)['access_token'];
